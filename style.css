@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*계산기 화면 가운데 정렬*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    border-radius: 20px;
+    width: 420px;
+    height: 700px;
+    padding: 0 20px 0;
+    background-color: #e5e5e5;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+
+/* 결과 출력 div */
+.display {
+    padding : 0 20px 0;
+    height: 25%;
+    border-radius: 20px;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    overflow: auto;
+}
+
+.buttons {
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+button {
+    width: 23%;
+    height: 18%;
+    border: 1px rgb(224, 224, 224) solid;
+    border-radius: 10px;
+    background-color: white;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.zero {
+    flex-grow: 1;
+}
+
+/* 버튼에 마우스 올리면(hover) 커지는 효과(transform : scale()) */
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    opacity: 0.6;
+}
+
+.zero:hover {
+    transform: scale(1.03);
+}
+
+.function {
+    background-color: #FF5F57;
+    border: 1px solid #EC4036;
+}
+
+.operator {
+    background-color: #FEBC2E;
+    border: 1px solid #EBA820;
+}
+
+.result {
+    background-color: #28C840;
+    border: 1px solid #16B432;
+}
+
+/* 도전 과제 : 창 사이즈 조절 버튼 */
+.setScreen {
+    height: 5%;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+
+    /* 마우스 올리면 포인터 효과 */
+    cursor: pointer;
+}
+
+/* 좌측 상단 버튼 3개 div */
+.setScreen div {
+    border-radius: 999px;
+    width: 13px;
+    height: 13px;
+}
+
+.setScreen .close {
+    background-color: #FF5F57;
+    border: 1px solid #EC4036;
+}
+
+.setScreen .minimize {
+    background-color: #FEBC2E;
+    border: 1px solid #EBA820;
+}
+
+.setScreen .maximize {
+    background-color: #28C840;
+    border: 1px solid #16B432;
+}
