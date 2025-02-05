@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>계산기</title>
-    <!--추후 스타일 시트 연결-->
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <input type="text" id="display" disabled>
+    <div class="container">
+        <div class="setScreen">
+            <div class="close"></div>
+            <div class="minimize"></div>
+            <div class="maximize"></div>
+        </div>
+        <div class="display"></div>
         <div class="buttons">
-            <!-- 첫 번째 줄 -->
-            <button class="btn" data-value="7">7</button>
-            <button class="btn" data-value="8">8</button>
-            <button class="btn" data-value="9">9</button>
-            <button class="btn operator" data-value="/">/</button>
-            
-            <!-- 두 번째 줄 -->
-            <button class="btn" data-value="4">4</button>
-            <button class="btn" data-value="5">5</button>
-            <button class="btn" data-value="6">6</button>
-            <button class="btn operator" data-value="*">*</button>
-            
-            <!-- 세 번째 줄 -->
-            <button class="btn" data-value="1">1</button>
-            <button class="btn" data-value="2">2</button>
-            <button class="btn" data-value="3">3</button>
-            <button class="btn operator" data-value="-">-</button>
-            
-            <!-- 네 번째 줄 -->
-            <button class="btn" data-value="0">0</button>
-            <button class="btn" data-value=".">.</button>
-            <button class="btn" id="clear">C</button>
-            <button class="btn operator" data-value="+">+</button>
-            
-            <!-- 결과 버튼 (전체 너비 사용) -->
-            <button class="btn" id="equals">=</button>
+            <!--
+            버튼 공통 클래스 : button
+            연산자 클래스 : operator
+            숫자 버튼 클래스 : number
+            c 버튼 클래스 : clear
+            . 버튼 클래스 : dot
+            = 버튼 클래스 : result
+            -->
+            <button class="button function"  value="AC">AC</button>
+            <button class="button function" value="+/-">+/-</button>
+            <button class="button function" value="%">%</button>
+            <button class="button operator" value="/">/</button>
+            <button class="button number"   value="7">7</button>
+            <button class="button number"   value="8">8</button>
+            <button class="button number"   value="9">9</button>
+            <button class="button operator" value="*">*</button>
+            <button class="button number"   value="4">4</button>
+            <button class="button number"   value="5">5</button>
+            <button class="button number"   value="6">6</button>
+            <button class="button operator" value="-">-</button>
+            <button class="button number"   value="1">1</button>
+            <button class="button number"   value="2">2</button>
+            <button class="button number"   value="3">3</button>
+            <button class="button operator" value="+">+</button>
+            <button class="button number zero"  value="0">0</button>
+            <button class="button number dot"   value=".">.</button>
+            <button class="button result"   value="=">=</button>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
