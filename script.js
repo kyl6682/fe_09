@@ -33,6 +33,7 @@ function calculate(x, y, opt) {
         case '-' : return x - y;
         case '*' : return x * y;
         case '/' : return x / y;
+        default : return;
     }
 }
 
